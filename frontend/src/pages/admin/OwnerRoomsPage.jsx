@@ -254,7 +254,7 @@ export default function OwnerRoomsPage() {
                   <CardMedia
                     component="img"
                     height="180"
-                    image={`http://localhost:8080${room.imageUrl}`}
+                    image={`https://wild-escape.onrender.com${room.imageUrl}`}
                     alt={room.roomType}
                   />
                 ) : (

@@ -42,7 +42,7 @@ export default function BookingForm({
     if (url.startsWith("http")) return url;
 
     // Default backend URL fallback
-    return `http://localhost:8080${url}`;
+    return `https://wild-escape.onrender.com${url}`;
   };
 
   // AUTO-CLEAR selected room if guests are too many

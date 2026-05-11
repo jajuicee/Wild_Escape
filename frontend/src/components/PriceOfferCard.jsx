@@ -40,7 +40,7 @@ const PriceOfferCard = ({
     if (url.startsWith("http")) return url;
 
     // Default backend URL fallback
-    return `http://localhost:8080${url}`;
+    return `https://wild-escape.onrender.com${url}`;
   };
 
   return (

@@ -99,7 +99,7 @@ export default function AdminRooms() {
                   <CardMedia
                     component="img"
                     height="200"
-                    image={`http://localhost:8080${room.imageUrl}`}
+                    image={`https://wild-escape.onrender.com${room.imageUrl}`}
                     alt={room.roomType}
                   />
                 ) : (

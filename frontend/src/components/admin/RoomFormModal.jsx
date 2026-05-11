@@ -45,7 +45,7 @@ export default function RoomFormModal({
     if (initial) {
       setForm(initial);
       setPreview(
-        initial.imageUrl ? `http://localhost:8080${initial.imageUrl}` : ""
+        initial.imageUrl ? `https://wild-escape.onrender.com${initial.imageUrl}` : ""
       );
     } else {
       setForm({
