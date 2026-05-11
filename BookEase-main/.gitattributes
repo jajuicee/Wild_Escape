@@ -1,0 +1,65 @@
+# ======================
+# Default behavior
+# ======================
+* text=auto
+* eol=lf
+
+# ======================
+# Shell scripts
+# ======================
+*.sh text eol=lf
+
+# ======================
+# Batch scripts
+# ======================
+*.bat text eol=crlf
+
+# ======================
+# Java source files
+# ======================
+*.java text eol=lf
+*.xml text eol=lf
+*.properties text eol=lf
+
+# ======================
+# Frontend files (JS/TS/CSS/HTML)
+# ======================
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# ======================
+# Ignore binaries (do not normalize)
+# ======================
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.mp4 binary
+*.mp3 binary
+*.pdf binary
+
+# ======================
+# Maven / Spring Boot target folder
+# ======================
+/backend/target/* -text
+
+# ======================
+# Node modules / frontend build
+# ======================
+/frontend/node_modules/* -text
+/frontend/dist/* -text
+/frontend/dist-ssr/* -text

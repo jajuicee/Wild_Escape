@@ -1,0 +1,48 @@
+import { useNavigate } from "react-router-dom";
+import { Box, Typography, Button, Container } from "@mui/material"
+
+const Error404Page = () => {
+  const navigate = useNavigate();
+
+  const handleGoHome = () => {
+    navigate("/");
+  };
+
+  return (
+    <>
+      <Container maxWidth="sm">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+            textAlign: "center",
+          }}
+        >
+          <Typography
+            variant="h1"
+            color="error"
+            sx={{ fontSize: "6rem", fontWeight: "bold" }}
+          >
+            404
+          </Typography>
+          <Typography variant="h4" gutterBottom>
+            Oops! The page you are looking for does not exist.
+          </Typography>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleGoHome}
+            sx={{ marginTop: 2 }}
+          >
+            Go to Homepage
+          </Button>
+        </Box>
+      </Container>
+    </>
+  );
+};
+
+export default Error404Page;
