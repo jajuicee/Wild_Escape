@@ -1,12 +1,15 @@
-# Build Stage: Download Java and build the app
+# Build Stage
 FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
+# Copy everything including the backend folder
 COPY . .
-RUN mvn clean package -DskipTests
+# Run the build from the backend folder
+RUN mvn -f backend/pom.xml clean package -DskipTests
 
-# Run Stage: Run the built app
+# Run Stage
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+# Grab the built jar from the backend target folder
+COPY --from=build /app/backend/target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","app.jar"]
